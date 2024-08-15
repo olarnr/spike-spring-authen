@@ -48,7 +48,7 @@ public class TokenController {
 				.map(GrantedAuthority::getAuthority)
 				.collect(Collectors.joining(" "));
 		JwtClaimsSet claims = JwtClaimsSet.builder()
-				.issuer("https://intproj23.sit.kmutt.ac.th/ft/")
+				.issuer("self")
 				.issuedAt(now)
 				.expiresAt(now.plusSeconds(expiry))
 				.subject(authentication.getName())
